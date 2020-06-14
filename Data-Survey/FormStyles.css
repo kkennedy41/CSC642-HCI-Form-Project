@@ -1,17 +1,29 @@
 
 body {
-  background-image: url(".jpg");
+  background-image: url(); /* MAKE THIS AN HREF TO RANDOM BACKGROUND IMG */
+  min-height: 100%;
+  background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
-.banner {
-
+h1 {
+  font-family: "Raleway", sans-serif;
 }
+
 
 .form-container {
 
 }
+
+.name-form {
+
+}
+
+.address-form {
+
+}
+
+
 
 .submit-button {
 
