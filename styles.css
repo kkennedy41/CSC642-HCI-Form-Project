@@ -1,0 +1,80 @@
+body {
+  background: #F8A434;
+  font-family: 'Lato', sans-serif;
+  color: #FDFCFB;
+  text-align: center;
+}
+
+
+form {
+  justify-content: center;
+  flex: auto;
+  padding: 40px;
+  max-width:600px;
+  margin:40px auto;
+}
+
+
+.header {
+  font-size: 35px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+
+.description {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.3em;
+  margin: -2px 0 45px;
+}
+
+.courseinfo{
+  color:#f5c9bf;
+  color:#E86C8D;
+}
+
+.required {
+  font-style: italic;
+}
+
+
+.input {
+  display: flex;
+  align-items: stretch;
+  margin: 1em;
+}
+
+
+.text-entry-button {
+  margin-left: 80px ;
+  margin-right: 80px ;
+  flex-direction: row;
+  flex: auto;
+  align-items: center;
+  height: 40px;
+  border: 1px;
+  border-radius: 9px;
+}
+
+
+#submit {
+  width: 30%;
+  height: 46px;
+  background: #E86C8D;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: large;
+  color: inherit;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top:15px;
+}
+  
+
+#submit:hover {
+  background: #d45d7d;
+  margin-top: 17px;
+}
+  
