@@ -1,17 +1,17 @@
 body {
-  background: #F8A434;
+  background: #dadcdd;
   font-family: 'Lato', sans-serif;
   color: #FDFCFB;
   text-align: center;
+  flex: auto;
+  justify-items: center;
+  margin-bottom: 3em;
 }
 
 
 form {
+  padding-top: 1em;
   justify-content: center;
-  flex: auto;
-  padding: 40px;
-  max-width:600px;
-  margin:40px auto;
 }
 
 
@@ -23,10 +23,9 @@ form {
 
 
 .description {
-  font-size: 14px;
+  font-size: 16px;
   letter-spacing: 1px;
-  line-height: 1.3em;
-  margin: -2px 0 45px;
+  line-height: 1em;
 }
 
 .courseinfo{
@@ -40,26 +39,21 @@ form {
 
 
 .input {
-  display: flex;
-  align-items: stretch;
   margin: 1em;
 }
 
 
 .text-entry-button {
-  margin-left: 80px ;
-  margin-right: 80px ;
-  flex-direction: row;
-  flex: auto;
-  align-items: center;
   height: 40px;
-  border: 1px;
+  width: 40%;
+  min-width: 250px;
+  border: 3px;
   border-radius: 9px;
 }
 
 
 #submit {
-  width: 30%;
+  width: 175px;
   height: 46px;
   background: #E86C8D;
   font-family: inherit;
