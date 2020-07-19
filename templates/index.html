@@ -35,7 +35,7 @@
       <input required type="text" class="text-entry-button" id="lastname" name="lastname" placeholder="  Last name *">
     </div>
 
-    <a>&#8962;</a>
+    <a>&#12336;</a>
 
     <!-- home address -->
     <div class="input">
@@ -48,7 +48,7 @@
     <!-- usa state drop down -->
     <div class="input">
       <select required class="text-entry-button" id="state" name="state">
-        <option value="" disabled selected hidden>&nbsp;&nbsp;Choose State *</option>
+        <option value="" disabled selected>&nbsp;&nbsp;Choose State *</option>
         <option value="AL">Alabama</option><option value="AK">Alaska</option>
         <option value="AZ">Arizona</option><option value="AR">Arkansas</option>
         <option value="CA">California</option><option value="CO">Colorado</option>
@@ -77,10 +77,30 @@
       </select>
     </div>
     <!----------------------------------->
+    
+    <a>&#12336;</a>
+
+    <!-------------- bday ---------------->
+    <div >
+      <select required class="text-entry-button" id="month" name="month">
+        <option value="" disabled selected>&nbsp;&nbsp;Month *</option>
+        <option value="jan">January</option><option value="feb">February</option>
+        <option value="march">March</option><option value="april">April</option>
+        <option value="may">May</option><option value="jun">June</option>
+        <option value="july">July</option><option value="august">August</option>
+        <option value="september">September</option><option value="oct">October</option>
+        <option value="nov">November</option><option value="dec">December</option>
+      </select>
+
+      <select required class="text-entry-button" id="day" name="day">
+
+      </select>
 
 
-    <!--bday-->
-    <!-------->
+
+      </select>
+    </div>
+    <!------------------------------------>
 
 
     <!---- education level dropdown ----->
@@ -97,7 +117,7 @@
         <option value="md">Medical doctorate</option>
       </select>
     </div>
-    <!----------------------------------->
+    <!------------------------------------->
 
 
     <!------------- height -------------->
@@ -110,26 +130,29 @@
 
     <!--------- phone and email --------->
     <div class="input">
+      <input required type="text" class="text-entry-button" id="phone" name="phone" placeholder="  Phone *">
+    </div>
+    <div class="input">
       <input required type="text" class="text-entry-button" id="email" name="email" placeholder="  Email *">
     </div>
     <div class="input">
-      <input type="text" class="text-entry-button" id="phone" name="phone" placeholder="  Phone *">
+      <input required type="text" class="text-entry-button" id="confirmemail" name="confirmemail" placeholder="  Confirm email *">
     </div>
     <!----------------------------------->
 
 
-    <!------i agree to terms box--------->
+    <!----- i agree to terms box -------->
     <div>
-      <input type="checkbox" id="iagree">
-      <label for="iagree"> I agree to the Terms & Conditions</label>
+      <input required type="checkbox" id="iagree">
+      <label for="iagree">*I agree to the <u>Terms & Conditions</u></label>
     </div>
     <!----------------------------------->
 
 
     <!------------ captcha -------------->
     <div class = input>
-      <label for="notbot">Please type the following in the box below: <i>not bot</i></label></br>
-      <input type="text" class ="text-entry-button" id="notbot" name ="notbot">
+      <label for="notbot">*Please type the following in the box below: <i>not bot</i></label></br>
+      <input type="text" class ="text-entry-button" id="notbot" name ="notbot" placeholder="  not bot">
     </div>
     <!----------------------------------->
 

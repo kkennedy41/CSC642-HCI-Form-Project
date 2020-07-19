@@ -31,18 +31,20 @@ def verification():
   if request.method == 'POST':
     cursor = mysql.connection.cursor()
 
+    userinfo = cursor.fetchall()
+
     firstname = request.form['firstname']
     lastname = request.form['lastname']
 
 
-  return render_template('verification.html')
+  return render_template('verification.html', data=userinfo)
 
 #----------------------------------------------------
 
 
 #--------------- main fxn ---------------------------
 if __name__ == "__main__":
-  app.run(debug=False)
+  app.run(port=8000, debug=False)
 
 def main():
   index()
