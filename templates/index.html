@@ -25,6 +25,8 @@
   </div>
 
 
+  <!----------------------- MAIN FORM -------------------------------->
+  {% block content %}
   <form action="/verification" method="POST" id='dataform' name="dataform">
 
     <!-- user info -->
@@ -140,12 +142,13 @@
     </div>
     <!----------------------------------->
 
+    <a>&#12336;</a>
 
     <!----- i agree to terms box -------->
     <div>
       <input required type="checkbox" id="iagree">
       <label for="iagree">*I agree to the <u>Terms & Conditions</u></label>
-    </div>
+    </div></br>
     <!----------------------------------->
 
 
@@ -162,6 +165,7 @@
     </div>
 
   </form>
+  {% endblock %}
     
 </body>
 </html>

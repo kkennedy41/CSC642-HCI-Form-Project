@@ -2,8 +2,9 @@ from flask import Flask, render_template, request, redirect
 from flaskext.mysql import MySQL
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'secretkey1'
 
-#-------------database connection --------------------
+#------------- database connection -------------------
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
@@ -29,22 +30,27 @@ def index():
 @app.route('/verification', methods=['GET', 'POST'])
 def verification():
   if request.method == 'POST':
-    cursor = mysql.connection.cursor()
-
-    userinfo = cursor.fetchall()
-
     firstname = request.form['firstname']
     lastname = request.form['lastname']
+    streetaddress = request.form['']
+    city = request.form['city']
+    state = request.form['state']
+    #bday
+    #email
+    #phone
+    #edu
+    #height
 
+
+  if request.method == 'GET':
+    cursor = mysql.connection.cursor()
+    userinfo = cursor.fetchall()
 
   return render_template('verification.html', data=userinfo)
-
 #----------------------------------------------------
 
 
 #--------------- main fxn ---------------------------
 if __name__ == "__main__":
-  app.run(port=8000, debug=False)
-
-def main():
-  index()
+  app.secret_key = "secretkey1"
+  app.run(debug=True)

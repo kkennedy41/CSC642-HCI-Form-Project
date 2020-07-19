@@ -56,6 +56,15 @@ form {
   border-radius: 9px;
 }
 
+.newform {
+  
+}
+
+.newform:hover {
+  color: #e46c51;
+  cursor: pointer;
+}
+
 
 #submit {
   width: 175px;
