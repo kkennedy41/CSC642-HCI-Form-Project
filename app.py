@@ -25,8 +25,8 @@ cursor = conn.cursor()
 #------------ index page ----------------------------
 @app.route('/', methods=['GET', 'POST'])
 def index():
-  #theForm = DataSurveyForm('mainform')  #create object of form class with form name in index.html
-    #theForm.firstName = firstName
+  #theForm = DataSurveyForm(request.form)
+  #theForm.firstName = firstName
     #else: #do this if error in form
       #return "~ERROR~ not a valid form"
 
@@ -38,11 +38,25 @@ def index():
 #------------ verification endpoint -----------------
 @app.route('/verification', methods=['GET', 'POST'])
 def verification():
-  data = request.form
-  data = request.form.to_dict()
-  data['some_key'] = "Some Value"
+  
 
-  return render_template('verification.html', data=data) #left is what html reads and sends to {{formInfo}}, right is what py reads
+
+  # firstname = request.form['firstname']
+  # lastname = request.form['lastname']
+  # street = request.form['streetaddress']
+  # city = request.form['city']
+  # stateUSA = request.form['stateUSA']
+  # zip = request.form['zip']
+  # feet = request.form['feet']
+  # inches = request.form['inches']
+  # day = request.form['day']
+  # month = request.form['month']
+  # year = request.form['year']
+  # edu = request.form['education']
+  # phone = request.form['phone']
+  # email = request.form['email']
+
+  return render_template('verification.html') #left is what html reads and sends to {{formInfo}}, right is what py reads
 #---------------------------------------------------
 
 

@@ -1,5 +1,5 @@
 body {
-  background: 	#00008B;
+  background:	#00008B;
   font-family: 'Lato', sans-serif;
   color: #FDFCFB;
   text-align: center;
@@ -37,6 +37,18 @@ form {
   font-size: 13px;
 }
 
+.input {
+  margin: 1em;
+}
+
+.text-entry-button {
+  height: 40px;
+  width: 40%;
+  min-width: 250px;
+  border: 3px;
+  border-radius: 9px;
+}
+
 
 .user-entry-field {
   height: 40px;
@@ -46,12 +58,8 @@ form {
   padding:30px;
 }
 
-.text-entry-button {
-  border: 30px;
-}
 
-
-.submitbutton {
+#submit {
   width: 175px;
   height: 46px;
   background: #eb917d;
@@ -66,28 +74,14 @@ form {
 }
   
 
-.submitbutton:hover {
-  background: #eb917d;
+#submit:hover {
+  background: #e46c51;
   margin-top: 17px;
 }
 
 
 /*------- verification.html only ---------*/
 
-table {
-  width: "80%";
-  border: "5";
-}
-
-.data-display {
-  
-}
-
-button {
-  all: unset;
-  font-size: 13px;
-  color: #eea493;
-}
 
 .newform:hover {
   color: #e46c51;
