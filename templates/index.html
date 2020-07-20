@@ -20,36 +20,56 @@
   </div>
 
   <div class="description">
-    <p>Please fill out each of the required fields below & check the box before submitting.</p>
+    <p>Please fill out each of the fields below & check the box before submitting.</p>
     <p class="required">* required</p>
   </div>
 
 
   <!----------------------- MAIN FORM -------------------------------->
-  {% block content %}
-  <form action="/verification" method="POST" id='dataform' name="dataform">
+  <form action='/verification' method='POST' id='mainform' name='mainform'>
 
-    <!-- user info -->
-    <div class="user-entry-field">
+    <!------ user info ------>
+    <div class="input">
       <input type="text" class="text-entry-button" id="firstname" name="firstname" placeholder="  First name *">
     </div>
-    <div class="user-entry-field">
+    <div class="input">
       <input type="text" class="text-entry-button" id="lastname" name="lastname" placeholder="  Last name *">
     </div>
+    <!------------------------>
 
     <a>&#12336;</a>
 
-    <!-- home address -->
-    <div class="user-entry-field">
-      <input required type="text" class="text-entry-button" id="streetaddress" name="streetaddress" placeholder="  Street address">
+    <!------ edu level ------>
+    <div class="input">
+      <select id="education" class="text-entry-button">
+        <option value="default" default disabled selected>&nbsp;&nbsp;Choose your education level</option>
+        <option value="none" >Prefer not to say</option>
+        <option value="shs">Some high school</option>
+        <option value="hs">High school diploma or equiv.</option>
+        <option value="ad">Associate's degree</option>
+        <option value="bd">Bachelor's degree</option>
+        <option value="gd">Graduate degree</option>
+        <option value="phd">PhD</option>
+        <option value="md">Medical doctorate</option>
+      </select>
     </div>
-    <div class="user-entry-field">
-      <input required type="text" class="text-entry-button" id="city" name="city" placeholder="  City *">
-    </div>
+    <!----------------------->
 
-    <!-- usa state drop down -->
-    <div class="user-entry-field">
-      <select required class="text-entry-button" id="state" name="state">
+    <a>&#12336;</a>
+
+    <!------ home address ------>
+    <div class="input">
+      <input  type="text" class="text-entry-button" id="streetaddress" name="streetaddress" placeholder="  Street address *">
+    </div>
+    <div class="input">
+      <input  type="text" class="text-entry-button" id="city" name="city" placeholder="  City *">
+    </div>
+    <!--------------------------->
+
+    
+    <!------ usa state drop down -->
+    <div class="input">
+      <select  class="text-entry-button" id="state" name="state">
         <option value="" disabled selected>&nbsp;&nbsp;Choose State *</option>
         <option value="AL">Alabama</option><option value="AK">Alaska</option>
         <option value="AZ">Arizona</option><option value="AR">Arkansas</option>
@@ -94,7 +114,7 @@
         <option value="nov">November</option><option value="dec">December</option>
       </select>
 
-      <select required class="text-entry-button" id="day" name="day">
+      <select  class="text-entry-button" id="day" name="day">
 
       </select>
 
@@ -105,39 +125,23 @@
     <!-------------------------->
 
 
-    <!---- education level dropdown ----->
-    <div class="user-entry-field">
-      <select id="education" class="text-entry-button">
-        <option value="default" default disabled selected>&nbsp;&nbsp;Choose your education level</option>
-        <option value="none" >Prefer not to say</option>
-        <option value="shs">Some high school</option>
-        <option value="hs">High school diploma or equiv.</option>
-        <option value="ad">Associate's degree</option>
-        <option value="bd">Bachelor's degree</option>
-        <option value="gd">Graduate degree</option>
-        <option value="phd">PhD</option>
-        <option value="md">Medical doctorate</option>
-      </select>
-    </div>
-    <!------------------------------------->
-
-
-    <!------------- height -------------->
-    <div class="user-entry-field">
+    <!---- height --------->
+    <div class="input">
       <input type="text" class="text-entry-button" id="height" placeholder="Inches tall">
       <input type="text" class="text-entry-button">
     </div>
-    <!----------------------------------->
+    <!--------------------->
 
+    <a>&#12336;</a>
 
     <!--------- phone and email --------->
-    <div class="user-entry-field">
+    <div class="input">
       <input type="text" class="text-entry-button" id="phone" name="phone" placeholder="  Phone *">
     </div>
-    <div class="user-entry-field">
+    <div class="input">
       <input type="text" class="text-entry-button" id="email" name="email" placeholder="  Email *">
     </div>
-    <div class="user-entry-field">
+    <div class="input">
       <input type="text" class="text-entry-button" id="confirmemail" name="confirmemail" placeholder="  Confirm email *">
     </div>
     <!----------------------------------->
@@ -147,25 +151,27 @@
     <!----- i agree to terms box -------->
     <div>
       <input type="checkbox" id="iagree">
-      <label for="iagree">*I agree to the <u>Terms & Conditions</u></label>
-    </div></br>
+      <label for="iagree">* I agree to the <u>Terms & Conditions</u></label>
+    </div>
     <!----------------------------------->
 
+    </br>
 
     <!------------ captcha -------------->
     <div class = input>
-      <label for="notbot">*Please type the following in the box below: <i>not bot</i></label></br>
+      <label for="notbot">* Please type the following in the box below: <i>not bot</i></label></br>
       <input type="text" class ="text-entry-button" id="notbot" name ="notbot" placeholder="  not bot">
     </div>
     <!----------------------------------->
 
 
+    <!------------ SUBMIT -------------->
     <div class="submitbutton">
       <input type="submit" id="submit" value="Submit &#9758;">
     </div>
 
   </form>
-  {% endblock %}
+  
     
 </body>
 </html>

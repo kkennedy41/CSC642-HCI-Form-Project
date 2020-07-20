@@ -1,37 +1,79 @@
 from flask_wtf import FlaskForm
-from wtforms import Form, BooleanField, StringField, PasswordField, SelectField, DateTimeField, SubmitField, validators
+from wtforms import Form, BooleanField, StringField, SelectField, DateTimeField, SubmitField, validators
 from wtforms.validators import *
 
 
 class DataSurveyForm(FlaskForm):
+
   #----- name -----
-  firstname = StringField('first_name', validators=[DataRequired(), Length(max=20)])
-  lastname = StringField('last_name', validators=[DataRequired(), Length(max=20)])
+  firstName = StringField('first_name',
+                          validators= [ 
+                            DataRequired(message='Please enter your first name'),
+                            Length(max=20)
+                          ])
+  lastName = StringField('last_name',
+                          validators = [
+                            DataRequired(message='Please enter your last name'),
+                            Length(max=20)
+                          ])
 
   #--- address ----
-  streetaddress = StringField('street_address', validators=[DataRequired(), Length(max=40)])
-  city = StringField('city_label')
-  state = SelectField()
+  streetAddress = StringField('street_address',
+                              validators=[DataRequired(),
+                              Length(max=40)
+                            ])
+  city = StringField('city_label',
+                      validators = [
+                        DataRequired(message='Please enter your city'),
+                        Length(max=40)
+                      ])
+  state = SelectField(validators= [ 
+                      DataRequired(message='Please enter your state')
+                      ])
+  zipcode = StringField('zip',
+                        validators = [
+                          DataRequired(message='Please enter your zip code'),
+                          Length(min=5,max=5),
+                          NumberRange(min=0,max=99999)])
 
   #----bday ------
-  birthday  = DateTimeField('Your Birthday', format='%m/%d/%y')
+  birthday = DateTimeField("birthday", format='%m/%d/%y', validators=[DataRequired(message='Please enter your date of birth')])
 
   #---- height ----
-  feet = StringField('feet_label')
-  inches = StringField('inches_label')
+  feet = StringField('feet_label', validators=[NumberRange(min=2,max=15)])
+  inches = StringField('inches_label', validators=[NumberRange(min=0,max=11)])
+
+  #----edu --------
+  edulevel = SelectField(validators=[])
 
   #----contact info----
-  phone = StringField('phone_label', validators=[DataRequired(), Length(min=7, max=7)])
+  phone = StringField('phone_label', 
+                      validators = [
+                        DataRequired(message='Please enter a phone number'),
+                        Length(min=7, max=7, message='Do not your include area code'),
+                        NumberRange(min=0,max=9999999, message='Please enter a valid phone number')
+                      ])
 
-  email = StringField('email_address', validators=[DataRequired(), Length(min=6, max=35)])
-  confirmEmail = StringField('confirm_email', validators=[DataRequired(), EqualTo(email, message='Emails do not match')])
+  email = StringField('email_address',
+                      validators= [ 
+                        DataRequired(message='Please enter a valid email address'),
+                        Length(min=6, max=35),
+                        Email('Please enter a valid email address')
+                      ])
 
-  iagree = BooleanField('i_accept', [validators.DataRequired()])
+  confirmEmail = StringField('confirm_email',
+                            validators=[DataRequired(message='Please confirm your email address'),
+                            EqualTo(email, message='Emails do not match')
+                          ])
 
-  capcha = StringField('capcha_label', [
-    validators.DataRequired(),
-    validators.EqualTo('not bot', message='Please enter the required text')
-  ])
+  iAgree = BooleanField('i_accept',
+                        validators=[DataRequired(message='Please check the box to agree')
+                        ])
+
+  capcha = StringField('capcha_label',
+                        validators=[DataRequired(message='Please enter the required text'),
+                        EqualTo('not bot', message='Please enter the required text')
+                      ])
 
   submit = SubmitField()
 

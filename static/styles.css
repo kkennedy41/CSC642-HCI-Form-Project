@@ -38,20 +38,21 @@ form {
 
 
 .user-entry-field {
-  margin: .5em;
   height: 40px;
   width: 40%;
   min-width: 250px;
-  border: 3px;
   border-radius: 9px;
+  padding:30px;
 }
 
-.mini-text-entry-button {
-  height: 40px;
-  border: 3px;
-  border-radius: 9px;
+.text-entry-button {
+  border: 30px;
 }
 
+.newform {
+  font-size: 13px; 
+  color: #e46c51;
+}
 
 .newform:hover {
   color: #e46c51;
@@ -59,7 +60,7 @@ form {
 }
 
 
-#submit {
+.submitbutton {
   width: 175px;
   height: 46px;
   background: #eb917d;
@@ -74,9 +75,21 @@ form {
 }
   
 
-#submit:hover {
-  background: #e46c51;
+.submitbutton:hover {
+  background: #eb917d;
   margin-top: 17px;
+}
+
+
+/*------- verification.html only ---------*/
+
+table {
+  width: "80%";
+  border: "5";
+}
+
+.data-display {
+  
 }
 
   

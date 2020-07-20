@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Data Verification</title>
+  <title>Data Survey Verification</title>
   <link rel="stylesheet" href="../static/styles.css">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link rel="icon" href="../static/favicon.png">
@@ -22,16 +22,20 @@
   </div>
 
   </br>
-  <div>
-  {% block content %}
-
-
-  {% endblock %}
+  
+  <!----------- results display ------------->
+  <div class='data-display'>
+    {% for item in data %}
+    <tr>
+      <td> {{item[0]}} {{item[1]}} {{item[2]}}, {{item[3]}}  -  {{item[4]}}</td>
+      </br></br>
+    </tr>
+    {% endfor %}
   </div>
-    
+  
+  </br>
 
-  
-  
+  <!-------- new form button --------->
   <form action="/" method="POST" id='newform' name="newform">
     <div class='description'>
       <p class='newform'><u>Click here to submit another data survery form</u></p>
