@@ -4,8 +4,12 @@
 <head>
   <meta charset='utf-8'>
   <title>Data Survey by K.Kennedy</title>
-  <link rel='stylesheet' href='../static/styles.css'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link href='../static/styles.css' rel='stylesheet' type='text/css'>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel='icon' href='../static/favicon.png'>
 </head>
 
@@ -26,7 +30,7 @@
 
 
   <!----------------------- MAIN FORM -------------------------------->
-  <form class='input' action='/verification' method='POST'>
+  <form action='/verification' method='POST'>
 
     <!------ user info ------>
     <div class='input'>
@@ -36,24 +40,6 @@
       <input type='text' class='text-entry-button' id='lastname' name='lastname' placeholder='  Last name *'>
     </div>
     <!------------------------>
-
-    <a>&#12336;</a>
-
-    <!------ edu level ------>
-    <div class='input'>
-      <select id='education' class='text-entry-button'>
-        <option value='default' default disabled selected>&nbsp;&nbsp;Choose your education level</option>
-        <option value='none' >Prefer not to say</option>
-        <option value='shs'>Some high school</option>
-        <option value='hs'>High school diploma or equiv.</option>
-        <option value='ad'>Associate's degree</option>
-        <option value='bd'>Bachelor's degree</option>
-        <option value='gd'>Graduate degree</option>
-        <option value='phd'>PhD</option>
-        <option value='md'>Medical doctorate</option>
-      </select>
-    </div>
-    <!----------------------->
 
     <a>&#12336;</a>
 
@@ -103,10 +89,28 @@
 
     <!------ zip code ------>
     <div class='input'>
-      <input  type='text' class='text-entry-button' id='zip' name='zip' placeholder='  Zip code *'>
+      <input  type='text' class='text-entry-button' id='zipcode' name='zipcode' placeholder='  Zip code *'>
     </div>
     <!---------------------->
-    
+
+    <a>&#12336;</a>
+
+    <!------ edu level ------>
+    <div class='input'>
+      <select id='education' class='text-entry-button'>
+        <option value='default' default disabled selected>&nbsp;&nbsp;Choose your education level</option>
+        <option value='none' >Prefer not to say</option>
+        <option value='shs'>Some high school</option>
+        <option value='hs'>High school diploma or equiv.</option>
+        <option value='ad'>Associate's degree</option>
+        <option value='bd'>Bachelor's degree</option>
+        <option value='gd'>Graduate degree</option>
+        <option value='phd'>PhD</option>
+        <option value='md'>Medical doctorate</option>
+      </select>
+    </div>
+    <!----------------------->
+
     <a>&#12336;</a>
 
     <!------- bday --------->
@@ -121,7 +125,8 @@
         <option value='september'>September</option><option value='oct'>October</option>
         <option value='nov'>November</option><option value='dec'>December</option>
       </select>
-
+    </div>
+    <div class='input'>
       <select class='text-entry-button' id='day' name='day'>
         <option value='' disabled selected>&nbsp;&nbsp;Day *</option>
         <option value='01'>1</option><option value='02'>2</option>
@@ -141,17 +146,21 @@
         <option value='29'>29</option><option value='30'>30</option>
         <option value='31'>31</option>
       </select>
-
-      <input type='text' class='text-entry-button' id='year' placeholder=' Year *'>
+    </div>
+    <div class='input'>
+      <input type='text' class='text-entry-button' id='year' placeholder='  Year *'>
     </div>
     <!-------------------------->
 
+    <a>&#12336;</a>
 
     <!-------- height --------->
     <div class='input'>
       <label> Your height </label></br>
       <input type='text' class='text-entry-button' id='feet' name='feet' placeholder=' Feet'>
       <label> '  </label>
+    </div>
+    <div class='input'>
       <input type='text' class='text-entry-button' id='inches' name='inches' placeholder=' Inches'>
       <label> " </label>
     </div>
@@ -176,7 +185,7 @@
     <!----- i agree to terms box -------->
     <div>
       <input type='checkbox' id='iagree'>
-      <label for='iagree'>I agree to the <u>Terms & Conditions *</u></label>
+      <label for='iagree'>I agree to the <u>Terms & Conditions</u>*</label>
     </div>
     <!----------------------------------->
 
@@ -194,9 +203,13 @@
     <div class = input>
       <input type='submit' id='submit' name='submit' value='Submit &#9758;'>
     </div>
-
+    <!----------------------------------->
   </form>
   
-    
+  <!------- makes page run faster -------->
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+  <!----------------------------------->
+  
 </body>
 </html>

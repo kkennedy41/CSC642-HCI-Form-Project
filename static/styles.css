@@ -10,7 +10,7 @@ body {
 
 
 form {
-  padding-top: 1em;
+  padding: 1em;
   justify-content: center;
 }
 
@@ -82,10 +82,19 @@ form {
 
 /*------- verification.html only ---------*/
 
+.newform {
+  color: white;
+  cursor: pointer;
+}
 
 .newform:hover {
   color: #e46c51;
   cursor: pointer;
+}
+
+.newform:visited {
+  text-decoration: none;
+  color:white;
 }
 
 #notbot {

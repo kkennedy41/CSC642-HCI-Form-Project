@@ -4,8 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Data Survey Verification</title>
-  <link rel="stylesheet" href="../static/styles.css">
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Lato:400,700'>
+  <link rel="stylesheet" type="text/css" href="../static/styles.css">
   <link rel="icon" href="../static/favicon.png">
 </head>
 
@@ -23,15 +24,27 @@
 
   </br></br>
   
-  <!----------- results display ------------->
+  <!------- results display ---------->
   <div>
-    <p>.......it's almost done I promise!!!! Even the map!</p>
+    <table>
+      {{ data }}
+    </table>
   </div>
+  <!---------------------------------->
+
+
+  <!---------- google maps ----------->
+  <div>
+
+
+  </div>
+  <!---------------------------------->
   
   </br></br>
 
   <!-------- new form button --------->
   <a class='newform' href='/'> Click here to submit another data survery form </a>
+  <!---------------------------------->
 
 </body>
 </html>
