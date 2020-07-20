@@ -1,5 +1,9 @@
 from flask import Flask, render_template, request, redirect
 from flaskext.mysql import MySQL
+from flask_wtf import FlaskForm
+from wtforms import Form, BooleanField, StringField, PasswordField, SelectField, DateField, validators
+from wtforms.validators import *
+from models.forms import DataSurveyForm
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey1'
@@ -21,6 +25,7 @@ cursor = conn.cursor()
 #------------ index page ----------------------------
 @app.route('/', methods=['GET', 'POST'])
 def index():
+  form = DataSurveyForm()
   return render_template('index.html')
 
 #----------------------------------------------------
@@ -28,18 +33,13 @@ def index():
 
 #------------ verification endpoint -----------------
 @app.route('/verification', methods=['GET', 'POST'])
-def verification():
+def verification(request):
   if request.method == 'POST':
     firstname = request.form['firstname']
     lastname = request.form['lastname']
     streetaddress = request.form['']
     city = request.form['city']
     state = request.form['state']
-    #bday
-    #email
-    #phone
-    #edu
-    #height
 
 
   if request.method == 'GET':
@@ -52,5 +52,5 @@ def verification():
 
 #--------------- main fxn ---------------------------
 if __name__ == "__main__":
-  app.secret_key = "secretkey1"
+  app.secret_key = 'secretkey1'
   app.run(debug=True)

@@ -30,25 +30,25 @@
   <form action="/verification" method="POST" id='dataform' name="dataform">
 
     <!-- user info -->
-    <div class="input">
-      <input required type="text" class="text-entry-button" id="firstname" name="firstname" placeholder="  First name *">
+    <div class="user-entry-field">
+      <input type="text" class="text-entry-button" id="firstname" name="firstname" placeholder="  First name *">
     </div>
-    <div class="input">
-      <input required type="text" class="text-entry-button" id="lastname" name="lastname" placeholder="  Last name *">
+    <div class="user-entry-field">
+      <input type="text" class="text-entry-button" id="lastname" name="lastname" placeholder="  Last name *">
     </div>
 
     <a>&#12336;</a>
 
     <!-- home address -->
-    <div class="input">
+    <div class="user-entry-field">
       <input required type="text" class="text-entry-button" id="streetaddress" name="streetaddress" placeholder="  Street address">
     </div>
-    <div class="input">
+    <div class="user-entry-field">
       <input required type="text" class="text-entry-button" id="city" name="city" placeholder="  City *">
     </div>
 
     <!-- usa state drop down -->
-    <div class="input">
+    <div class="user-entry-field">
       <select required class="text-entry-button" id="state" name="state">
         <option value="" disabled selected>&nbsp;&nbsp;Choose State *</option>
         <option value="AL">Alabama</option><option value="AK">Alaska</option>
@@ -78,13 +78,13 @@
         <option value="WY">Wyoming</option>
       </select>
     </div>
-    <!----------------------------------->
+    <!---------------------->
     
     <a>&#12336;</a>
 
-    <!-------------- bday ---------------->
+    <!------- bday --------->
     <div >
-      <select required class="text-entry-button" id="month" name="month">
+      <select class="text-entry-button" id="month" name="month">
         <option value="" disabled selected>&nbsp;&nbsp;Month *</option>
         <option value="jan">January</option><option value="feb">February</option>
         <option value="march">March</option><option value="april">April</option>
@@ -102,11 +102,11 @@
 
       </select>
     </div>
-    <!------------------------------------>
+    <!-------------------------->
 
 
     <!---- education level dropdown ----->
-    <div class="input">
+    <div class="user-entry-field">
       <select id="education" class="text-entry-button">
         <option value="default" default disabled selected>&nbsp;&nbsp;Choose your education level</option>
         <option value="none" >Prefer not to say</option>
@@ -123,7 +123,7 @@
 
 
     <!------------- height -------------->
-    <div class="input">
+    <div class="user-entry-field">
       <input type="text" class="text-entry-button" id="height" placeholder="Inches tall">
       <input type="text" class="text-entry-button">
     </div>
@@ -131,14 +131,14 @@
 
 
     <!--------- phone and email --------->
-    <div class="input">
-      <input required type="text" class="text-entry-button" id="phone" name="phone" placeholder="  Phone *">
+    <div class="user-entry-field">
+      <input type="text" class="text-entry-button" id="phone" name="phone" placeholder="  Phone *">
     </div>
-    <div class="input">
-      <input required type="text" class="text-entry-button" id="email" name="email" placeholder="  Email *">
+    <div class="user-entry-field">
+      <input type="text" class="text-entry-button" id="email" name="email" placeholder="  Email *">
     </div>
-    <div class="input">
-      <input required type="text" class="text-entry-button" id="confirmemail" name="confirmemail" placeholder="  Confirm email *">
+    <div class="user-entry-field">
+      <input type="text" class="text-entry-button" id="confirmemail" name="confirmemail" placeholder="  Confirm email *">
     </div>
     <!----------------------------------->
 
@@ -146,7 +146,7 @@
 
     <!----- i agree to terms box -------->
     <div>
-      <input required type="checkbox" id="iagree">
+      <input type="checkbox" id="iagree">
       <label for="iagree">*I agree to the <u>Terms & Conditions</u></label>
     </div></br>
     <!----------------------------------->

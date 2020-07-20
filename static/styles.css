@@ -37,12 +37,8 @@ form {
 }
 
 
-.input {
+.user-entry-field {
   margin: .5em;
-}
-
-
-.text-entry-button {
   height: 40px;
   width: 40%;
   min-width: 250px;
@@ -56,9 +52,6 @@ form {
   border-radius: 9px;
 }
 
-.newform {
-  
-}
 
 .newform:hover {
   color: #e46c51;
