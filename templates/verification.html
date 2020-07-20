@@ -21,27 +21,19 @@
     <p>Thanks for submitting your info. Below is a confirmation of your responses.</p>
   </div>
 
-  </br>
+  </br></br>
   
   <!----------- results display ------------->
   <div class='data-display'>
     {% for item in data %}
-    <tr>
-      <td> {{item[0]}} {{item[1]}} {{item[2]}}, {{item[3]}}  -  {{item[4]}}</td>
-      </br></br>
-    </tr>
+      {{ key }}:  {{ value }}
     {% endfor %}
   </div>
   
-  </br>
+  </br></br>
 
   <!-------- new form button --------->
-  <form action="/" method="POST" id='newform' name="newform">
-    <div class='description'>
-      <p class='newform'><u>Click here to submit another data survery form</u></p>
-    </div>
-  </form>
+  <a class='newform' href='/'> Click here to submit another data survery form </a>
 
 </body>
-
 </html>

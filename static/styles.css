@@ -34,6 +34,7 @@ form {
 
 .required {
   font-style: italic;
+  font-size: 13px;
 }
 
 
@@ -47,16 +48,6 @@ form {
 
 .text-entry-button {
   border: 30px;
-}
-
-.newform {
-  font-size: 13px; 
-  color: #e46c51;
-}
-
-.newform:hover {
-  color: #e46c51;
-  cursor: pointer;
 }
 
 
@@ -92,4 +83,17 @@ table {
   
 }
 
-  
+button {
+  all: unset;
+  font-size: 13px;
+  color: #eea493;
+}
+
+.newform:hover {
+  color: #e46c51;
+  cursor: pointer;
+}
+
+#notbot {
+  margin-bottom: 8px;
+}
