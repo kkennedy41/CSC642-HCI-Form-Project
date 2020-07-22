@@ -39,6 +39,7 @@ def index():
 def verification():
   if request.method == 'POST':
     form = request.form
+    args = request.args
 
     firstname = form['firstname']
     lastname = form['lastname']
@@ -50,10 +51,10 @@ def verification():
     feet = form['feet']
 
     #for dropdown menu data
-    stateUSA = request.args.get('stateUSA')
-    month = request.args.get('month')
-    day = request.args.get('day')
-    year = request.args.get('year')
+    # stateUSA = args.get('stateUSA')
+    # month = args.get('month')
+    # day = args.get('day')
+    # year = args.get('year')
 
     # cursor.execute("INSERT INTO Data_Survey (firstname, lastname) VALUES (%s, %s)", (firstname, lastname))
     # conn.commit()
