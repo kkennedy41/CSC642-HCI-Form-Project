@@ -32,7 +32,7 @@ def index():
 def verification():
   if request.method == 'POST':
     form = request.form
-    args = request.args
+    #args = request.args
 
     firstname = form['firstname']
     lastname = form['lastname']
