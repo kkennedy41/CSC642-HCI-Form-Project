@@ -42,4 +42,6 @@ class DataSurveyForm(FlaskForm):
 
   capcha = StringField('capcha_label', validators = [ DataRequired(message='Please enter the required text'),EqualTo('not bot', message='Please enter the required text')])
 
+  #---- format data for printing---
+
   submit = SubmitField()

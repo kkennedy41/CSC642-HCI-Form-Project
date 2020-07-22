@@ -1,7 +1,6 @@
 body {
   background:	#00008B !important;
   font-family: 'Lato', sans-serif;
-  color: #FDFCFB;
   text-align: center;
   flex: auto;
   justify-items: center;
@@ -28,8 +27,12 @@ form {
   line-height: 1em;
 }
 
-.courseinfo{
-  color:#eea493;
+#header1st {
+  color:#eea493 !important;
+}
+
+#header2nd {
+  color: white !important;
 }
 
 .required {
@@ -81,6 +84,14 @@ form {
 
 
 /*------- verification.html only ---------*/
+
+label {
+  padding-bottom: 6px;
+}
+
+tr {
+  padding: 8px;
+}
 
 .newform {
   color: white;

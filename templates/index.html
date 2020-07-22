@@ -9,18 +9,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href='../static/styles.css' rel='stylesheet' type='text/css'>
-  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
+  <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet"> -->
   <link rel='icon' href='../static/favicon.png'>
 </head>
 
 <body>
   <div class='header'>
-    <p class='courseinfo'>CSC 642 HCI</p>
-    <p class='courseinfo'>Summer 2020</p>
-    <p class='courseinfo'>Individual Assignment</p>
-    <p >Katie Kennedy</p>
-    <p >&#9730;</p>
-    <p>Data Survey Form</p>
+    <p class='header1st' id='header1st'>CSC 642 HCI</p>
+    <p class='header1st'  id='header1st'>Summer 2020</p>
+    <p class='header1st'  id='header1st'>Individual Assignment</p>
+    <p class='header2nd'  id='header2nd'>Katie Kennedy</p>
+    <p class='header2nd'  id='header2nd'>&#9730;</p>
+    <p class='header2nd'  id='header2nd'>Data Survey Form</p>
   </div>
 
   <div class='description'>
@@ -32,12 +32,12 @@
   <!----------------------- MAIN FORM -------------------------------->
   <form action='/verification' method='POST'>
 
-    <!------ user info ------>
+    <!---------- name -------->
     <div class='input'>
-      <input type='text' class='text-entry-button' id='firstname' name='firstname' placeholder='  First name *'>
+      <input required type='text' class='text-entry-button' id='firstname' name='firstname' placeholder='  First name *'>
     </div>
     <div class='input'>
-      <input type='text' class='text-entry-button' id='lastname' name='lastname' placeholder='  Last name *'>
+      <input  required type='text' class='text-entry-button' id='lastname' name='lastname' placeholder='  Last name *'>
     </div>
     <!------------------------>
 
@@ -45,17 +45,17 @@
 
     <!------ home address ------>
     <div class='input'>
-      <input type='text' class='text-entry-button' id='streetaddress' name='streetaddress' placeholder='  Street address *'>
+      <input required type='text' class='text-entry-button' id='streetaddress' name='streetaddress' placeholder='  Street address *'>
     </div>
     <div class='input'>
-      <input  type='text' class='text-entry-button' id='city' name='city' placeholder='  City *'>
+      <input required type='text' class='text-entry-button' id='city' name='city' placeholder='  City *'>
     </div>
     <!--------------------------->
 
     
     <!------ usa state drop down -->
     <div class='input'>
-      <select class='text-entry-button' id='stateUSA' name='stateUSA'>
+      <select  class='text-entry-button' id='stateUSA' name='stateUSA'>
         <option value='default' disabled selected>&nbsp;&nbsp;Choose State *</option>
         <option value='AL'>Alabama</option><option value='AK'>Alaska</option>
         <option value='AZ'>Arizona</option><option value='AR'>Arkansas</option>
@@ -89,7 +89,7 @@
 
     <!------ zip code ------>
     <div class='input'>
-      <input  type='text' class='text-entry-button' id='zipcode' name='zipcode' placeholder='  Zip code *'>
+      <input required type='text' class='text-entry-button' id='zipcode' name='zipcode' placeholder='  Zip code *'>
     </div>
     <!---------------------->
 
@@ -157,11 +157,11 @@
     <!-------- height --------->
     <div class='input'>
       <label> Your height </label></br>
-      <input type='text' class='text-entry-button' id='feet' name='feet' placeholder=' Feet'>
+      <input  type='text' class='text-entry-button' id='feet' name='feet' placeholder=' Feet'>
       <label> '  </label>
     </div>
     <div class='input'>
-      <input type='text' class='text-entry-button' id='inches' name='inches' placeholder=' Inches'>
+      <input  type='text' class='text-entry-button' id='inches' name='inches' placeholder=' Inches'>
       <label> " </label>
     </div>
     <!--------------------->
@@ -170,13 +170,13 @@
 
     <!--------- phone and email --------->
     <div class='input'>
-      <input type='text' class='text-entry-button' id='phone' name='phone' placeholder='  Phone *'>
+      <input required type='text' class='text-entry-button' id='phone' name='phone' placeholder='  Phone *'>
     </div>
     <div class='input'>
-      <input type='text' class='text-entry-button' id='email' name='email' placeholder='  Email *'>
+      <input required type='text' class='text-entry-button' id='email' name='email' placeholder='  Email *'>
     </div>
     <div class='input'>
-      <input type='text' class='text-entry-button' id='confirmemail' name='confirmemail' placeholder='  Confirm email *'>
+      <input required type='text' class='text-entry-button' id='confirmemail' name='confirmemail' placeholder='  Confirm email *'>
     </div>
     <!----------------------------------->
 
@@ -184,7 +184,7 @@
 
     <!----- i agree to terms box -------->
     <div>
-      <input type='checkbox' id='iagree'>
+      <input  type='checkbox' id='iagree'>
       <label for='iagree'>I agree to the <u>Terms & Conditions</u>*</label>
     </div>
     <!----------------------------------->
@@ -206,11 +206,6 @@
     </div>
     <!----------------------------------->
   </form>
-  
-  <!------- makes page run faster -------->
-  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-  <!----------------------------------->
   
 </body>
 </html>

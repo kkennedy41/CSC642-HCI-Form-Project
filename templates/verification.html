@@ -11,11 +11,11 @@
 </head>
 
 <body>
-  <div class="header">
-    <p class="courseinfo">Katie Kennedy</p>
-    <p >Data Survey Form</p>
-    <p >&#9730;</p>
-    <p>Verification</p>
+  <div class='header'>
+    <p class='header1st'>Katie Kennedy</p>
+    <p class='header2nd'>Data Survey Form</p>
+    <p class='header2nd'>&#9730;</p>
+    <p class='header2nd'>Verification</p>
   </div>
 
   <div class="description">
@@ -27,7 +27,37 @@
   <!------- results display ---------->
   <div>
     <table>
-        {{ data }}
+      <tr> <th>Name: </th>
+         <td> {{ form.firstname }} {{ form.lastname }} </td>
+      </tr>
+      </br>
+      <tr> <th>Address: </th>
+        <td> {{ form.streetaddress }} </br>
+             {{ form.city }}, {{ form.stateUSA }} </br>
+             {{ form.zipcode }}
+        </td>
+      </tr>
+      </br>
+      <tr> <th>Phone: </th>
+        <td> {{ form.phone }} </td>
+      </tr>
+      </br>
+
+      <tr> <th>Email: </th>
+        <td> {{ form.email }} </td>
+      </tr>
+      </br>
+
+      <tr> <th>Height: </th>
+        <td> {{ form.feet }}' {{  form.inches }}" </td>
+     </tr>
+     </br>
+
+     <tr> <th>Education level: </th>
+        <td> {{ form.edu }} </td>
+     </tr>
+     </br>
+
     </table>
   </div>
   <!---------------------------------->
