@@ -4,7 +4,7 @@ from flask_wtf import FlaskForm
 #from flask_bootstrap import Bootstrap
 from wtforms import Form, BooleanField, StringField, PasswordField, SelectField, DateField, validators
 from wtforms.validators import *
-from flask_googlemaps import GoogleMaps, Map
+#from flask_googlemaps import GoogleMaps, Map
 from models.forms import DataSurveyForm
 
 app = Flask(__name__)
