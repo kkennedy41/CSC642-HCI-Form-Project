@@ -7,16 +7,16 @@ from wtforms.validators import *
 app = Flask(__name__)
 
 #------------ database connection -------------------
-app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DATABASE_DB'] = 'FormDB'
-app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
+# app.config['MYSQL_DATABASE_HOST'] = 'localhost'
+# app.config['MYSQL_DATABASE_USER'] = 'root'
+# app.config['MYSQL_PASSWORD'] = ''
+# app.config['MYSQL_DATABASE_DB'] = 'FormDB'
+# app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
-mysql = MySQL()
-mysql.init_app(app)
-conn = mysql.connect()
-cursor = conn.cursor()
+# mysql = MySQL()
+# mysql.init_app(app)
+# conn = mysql.connect()
+# cursor = conn.cursor()
 #----------------------------------------------------
 
 
