@@ -1,13 +1,11 @@
 body {
-  background:	#EBF5FB;
+  background:	#053b5a;
   color: white;
   font-family: 'Lato', sans-serif;
-  display:flex;
+  text-align: center;
   flex: auto;
   justify-items: center;
   margin-bottom: 3em;
-  text-justify: center;
-  margin-left: 2em;
 }
 
 form {
