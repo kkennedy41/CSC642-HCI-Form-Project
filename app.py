@@ -1,17 +1,10 @@
 from flask import Flask, render_template, request, redirect
 from flaskext.mysql import MySQL
 from flask_wtf import FlaskForm
-#from flask_bootstrap import Bootstrap
 from wtforms import Form, BooleanField, StringField, PasswordField, SelectField, DateField, validators
 from wtforms.validators import *
-#from flask_googlemaps import GoogleMaps, Map
-from models.forms import DataSurveyForm
 
 app = Flask(__name__)
-#app.config['SECRET_KEY'] = 'secretkey1'
-#app.config['GOOGLEMAPS_KEY'] = ''  #get from google api website
-#GoogleMaps(app, key)
-#Bootstrap(app)
 
 #------------ database connection -------------------
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
@@ -69,5 +62,4 @@ def verification():
 
 #--------------- main fxn --------------------------
 if __name__ == "__main__":
-  #app.secret_key = 'secretkey1'
   app.run(debug=True)
