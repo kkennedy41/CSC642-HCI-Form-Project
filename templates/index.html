@@ -9,18 +9,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
   <link href='../static/styles.css' rel='stylesheet' type='text/css'>
-  <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet"> -->
   <link rel='icon' href='../static/favicon.png'>
 </head>
 
 <body>
   <div class='header'>
-    <p class='header1st' id='header1st'>CSC 642 HCI</p>
-    <p class='header1st'  id='header1st'>Summer 2020</p>
-    <p class='header1st'  id='header1st'>Individual Assignment</p>
-    <p class='header2nd'  id='header2nd'>Katie Kennedy</p>
-    <p class='header2nd'  id='header2nd'>&#9730;</p>
-    <p class='header2nd'  id='header2nd'>Data Survey Form</p>
+    <p class='topheader'>CSC 642 HCI</p>
+    <p class='topheader'>Summer 2020</p>
+    <p class='topheader'>Individual Assignment</p>
+    <p>Katie Kennedy</p>
+    <p>&#9730;</p>
+    <p>Data Survey Form</p>
   </div>
 
   <div class='description'>
@@ -55,8 +54,8 @@
     
     <!------ usa state drop down -->
     <div class='input'>
-      <select  class='text-entry-button' id='stateUSA' name='stateUSA'>
-        <option value='default' disabled selected>&nbsp;&nbsp;Choose State *</option>
+      <select required class='text-entry-button' id='stateUSA' name='stateUSA'>
+        <option value='default' default disabled selected>&nbsp;&nbsp;Choose State *</option>
         <option value='AL'>Alabama</option><option value='AK'>Alaska</option>
         <option value='AZ'>Arizona</option><option value='AR'>Arkansas</option>
         <option value='CA'>California</option><option value='CO'>Colorado</option>
@@ -99,7 +98,7 @@
     <div class='input'>
       <select id='education' class='text-entry-button'>
         <option value='default' default disabled selected>&nbsp;&nbsp;Choose your education level</option>
-        <option value='none' >Prefer not to say</option>
+        <option value='Prefer not to say' name='Prefer not to say'>Prefer not to say</option>
         <option value='shs'>Some high school</option>
         <option value='hs'>High school diploma or equiv.</option>
         <option value='ad'>Associate's degree</option>
@@ -111,13 +110,13 @@
     </div>
     <!----------------------->
 
-    <a>&#12336;</a>
+    <a> &#12336; </a>
 
     <!------- bday --------->
     <div class='input'>
       <label name='descriptor' id='descriptor'>Your date of birth</label></br>
-      <select class='text-entry-button' id='month' name='month'>
-        <option value='' disabled selected>&nbsp;&nbsp;Month *</option>
+      <select required class='text-entry-button' id='month' name='month'>
+        <option value='default' default disabled selected>&nbsp;&nbsp;Month *</option>
         <option value='jan'>January</option><option value='feb'>February</option>
         <option value='march'>March</option><option value='april'>April</option>
         <option value='may'>May</option><option value='jun'>June</option>
@@ -127,8 +126,8 @@
       </select>
     </div>
     <div class='input'>
-      <select class='text-entry-button' id='day' name='day'>
-        <option value='' disabled selected>&nbsp;&nbsp;Day *</option>
+      <select required class='text-entry-button' id='day' name='day'>
+        <option value='default' disabled selected>&nbsp;&nbsp;Day *</option>
         <option value='01'>1</option><option value='02'>2</option>
         <option value='03'>3</option><option value='04'>4</option>
         <option value='05'>5</option><option value='06'>6</option>
@@ -147,7 +146,7 @@
         <option value='31'>31</option>
       </select>
     </div>
-    <div class='input'>
+    <div required class='input'>
       <input type='text' class='text-entry-button' id='year' placeholder='  Year *'>
     </div>
     <!-------------------------->
@@ -192,7 +191,7 @@
     </br>
 
     <!------------ captcha -------------->
-    <div class = input>
+    <div required class = input>
       <label for='notbot'>* Please type the following in the box below: <i>not bot</i></label></br>
       <input type='text' class ='text-entry-button' id='notbot' name ='notbot' placeholder='  not bot'>
     </div>

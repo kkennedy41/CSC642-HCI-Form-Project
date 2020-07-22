@@ -1,12 +1,10 @@
 body {
   background:	#00008B !important;
   font-family: 'Lato', sans-serif;
-  text-align: center;
   flex: auto;
   justify-items: center;
   margin-bottom: 3em;
 }
-
 
 form {
   padding: 1em;
@@ -20,19 +18,15 @@ form {
   letter-spacing: 5px;
 }
 
+.topheader{
+  color: #eb917d;
+}
+
 
 .description {
   font-size: 16px;
   letter-spacing: 1px;
   line-height: 1em;
-}
-
-#header1st {
-  color:#eea493 !important;
-}
-
-#header2nd {
-  color: white !important;
 }
 
 .required {
@@ -89,18 +83,28 @@ label {
   padding-bottom: 6px;
 }
 
+.resultsdisplay {
+  text-align: center;
+}
+
 tr {
-  padding: 8px;
+  margin: 10px;
 }
 
 .newform {
   color: white;
+  text-decoration: underline !important;
+  background:none;
+  border:none;
+  margin:0;
+  padding:0;
   cursor: pointer;
 }
 
 .newform:hover {
   color: #e46c51;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .newform:visited {

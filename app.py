@@ -39,23 +39,27 @@ def index():
 def verification():
   if request.method == 'POST':
     form = request.form
+
     firstname = form['firstname']
     lastname = form['lastname']
     phone = form['phone']
-    #birthday = form.get('bday')
     email = form['email']
     streetaddress = form['streetaddress']
     city = form['city']
-    stateUSA = form.get('stateUSA')
     inches = form['inches']
     feet = form['feet']
 
-    cursor.execute("INSERT INTO Data_Survey (firstname, lastname) VALUES (%s, %s)", (firstname, lastname))
-    conn.commit()
+    #for dropdown menu data
+    stateUSA = request.args.get('stateUSA')
+    month = request.args.get('month')
+    day = request.args.get('day')
+    year = request.args.get('year')
 
-    cursor.execute("SELECT firstname,lastname FROM Data_Survey ORDER BY form_id DESC LIMIT 1;")  #then get it back 
-    conn.commit()
-    data = cursor.fetchall()
+    # cursor.execute("INSERT INTO Data_Survey (firstname, lastname) VALUES (%s, %s)", (firstname, lastname))
+    # conn.commit()
+    # cursor.execute("SELECT firstname,lastname FROM Data_Survey ORDER BY form_id DESC LIMIT 1;")  #then get it back 
+    # conn.commit()
+    # data = cursor.fetchall()
     return render_template('verification.html', form=form)
 
   return render_template('verification.html')

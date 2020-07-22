@@ -12,7 +12,7 @@
 
 <body>
   <div class='header'>
-    <p class='header1st'>Katie Kennedy</p>
+    <a class='header1st'>Katie Kennedy</p>
     <p class='header2nd'>Data Survey Form</p>
     <p class='header2nd'>&#9730;</p>
     <p class='header2nd'>Verification</p>
@@ -22,44 +22,52 @@
     <p>Thanks for submitting your info. Below is a confirmation of your responses.</p>
   </div>
 
-  </br></br>
+  </br></br></br></br>
   
   <!------- results display ---------->
-  <div>
-    <table>
-      <tr> <th>Name: </th>
-         <td> {{ form.firstname }} {{ form.lastname }} </td>
-      </tr>
-      </br>
-      <tr> <th>Address: </th>
-        <td> {{ form.streetaddress }} </br>
-             {{ form.city }}, {{ form.stateUSA }} </br>
-             {{ form.zipcode }}
-        </td>
-      </tr>
-      </br>
-      <tr> <th>Phone: </th>
-        <td> {{ form.phone }} </td>
-      </tr>
-      </br>
+ 
+    <tr> <th><b>Name:  </b> </th>
+      <td> {{ form.firstname }} {{ form.lastname }} </td>
+    </tr>
 
-      <tr> <th>Email: </th>
-        <td> {{ form.email }} </td>
-      </tr>
-      </br>
+    </br></br></br>
 
-      <tr> <th>Height: </th>
-        <td> {{ form.feet }}' {{  form.inches }}" </td>
-     </tr>
-     </br>
+    <tr> <th><b>Address:   </b></th>
+      <td> {{ form.streetaddress }} </br>
+            {{ form.city }}, {{ form.stateUSA }} </br>
+            {{ form.zipcode }}
+      </td>
+    </tr>
+    
+    </br></br></br>
 
-     <tr> <th>Education level: </th>
-        <td> {{ form.edu }} </td>
-     </tr>
-     </br>
+    <tr> <th><b>Phone:   </b></th>
+      <td> {{ form.phone }} </td>
+    </tr>
+    
+    </br></br></br>
 
-    </table>
-  </div>
+    <tr> <th><b>Email:   </b></th>
+      <td> {{ form.email }} </td>
+    </tr>
+    
+    </br></br></br>
+
+    {% if form.feet != '' %}
+    <tr> <th><b>Height:   </b></th>
+      <td> {{ form.feet }}' {{  form.inches }}" </td>
+    </tr>
+    </br></br></br>
+    {% endif %}
+
+    {% if form.edu %}
+    <tr> <th><b>Education level:   </b></th>
+      <td> {{ form.edu }} </td>
+    </tr>
+    </br></br></br>
+    {% endif %}
+
+
   <!---------------------------------->
 
 
@@ -70,10 +78,12 @@
   </div>
   <!---------------------------------->
   
-  </br></br>
+  </br>
+    
+  </br>
 
   <!-------- new form button --------->
-  <a class='newform' href='/'> Click here to submit another data survery form </a>
+  <a class='newform' href='/'>Click here to submit another data survery form</a>
   <!---------------------------------->
 
 </body>
